@@ -229,5 +229,7 @@ ws/loadEtudiant.php
 
 
 
+     Étape 1 – Création du projet Android
 
+<img width="323" height="338" alt="image" src="https://github.com/user-attachments/assets/1d311afa-6f43-41a0-ab63-d77bbba465f1" />
 
