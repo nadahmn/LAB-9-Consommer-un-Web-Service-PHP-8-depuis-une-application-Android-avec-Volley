@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API - Gestion Étudiants</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        pre { background: #f0f0f0; padding: 10px; }
+        button { margin: 5px; padding: 10px; cursor: pointer; }
+        input { padding: 8px; margin: 5px; width: 200px; }
+    </style>
+</head>
+<body>
+    <h1>Test des Web Services PHP</h1>
+
+    <div>
+        <h2>1. Tester Load (GET)</h2>
+        <button onclick="testLoad()">Charger tous les étudiants</button>
+    </div>
+
+    <div>
+        <h2>2. Tester Create (POST)</h2>
+        <input type="text" id="nom" placeholder="Nom" value="Houmine">
+        <input type="text" id="prenom" placeholder="Prénom" value="Nada">
+        <input type="text" id="ville" placeholder="Ville" value="Casablanca">
+        <select id="sexe">
+            <option value="homme">Homme</option>
+            <option value="femme" selected>Femme</option>
+        </select>
+        <button onclick="testCreate()">Ajouter étudiant</button>
+    </div>
+
+    <div>
+        <h2>3. Tester Delete (POST)</h2>
+        <input type="number" id="deleteId" placeholder="ID à supprimer">
+        <button onclick="testDelete()">Supprimer</button>
+    </div>
+
+    <div>
+        <h2>4. Réponse JSON</h2>
+        <pre id="response">...</pre>
+    </div>
+
+    <script>
+        const baseUrl = 'http://localhost/projet/ws/';
+
+        async function testLoad() {
+            try {
+                const response = await fetch(baseUrl + 'loadEtudiant.php');
+                const data = await response.json();
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').innerHTML = 'Erreur: ' + error.message;
+            }
+        }
+
+        async function testCreate() {
+            const formData = new URLSearchParams();
+            formData.append('nom', document.getElementById('nom').value);
+            formData.append('prenom', document.getElementById('prenom').value);
+            formData.append('ville', document.getElementById('ville').value);
+            formData.append('sexe', document.getElementById('sexe').value);
+
+            try {
+                const response = await fetch(baseUrl + 'createEtudiant.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: formData
+                });
+                const data = await response.json();
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+                if (data.success) testLoad();
+            } catch (error) {
+                document.getElementById('response').innerHTML = 'Erreur: ' + error.message;
+            }
+        }
+
+        async function testDelete() {
+            const formData = new URLSearchParams();
+            formData.append('id', document.getElementById('deleteId').value);
+
+            try {
+                const response = await fetch(baseUrl + 'deleteEtudiant.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: formData
+                });
+                const data = await response.json();
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+                if (data.success) testLoad();
+            } catch (error) {
+                document.getElementById('response').innerHTML = 'Erreur: ' + error.message;
+            }
+        }
+
+        testLoad();
+    </script>
+</body>
+</html>
