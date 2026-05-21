@@ -60,10 +60,16 @@ CREATE DATABASE school1;
 
 2.3 Créer la table Etudiant :
 
+
+
 <img width="433" height="236" alt="Capture d&#39;écran 2026-05-21 173433" src="https://github.com/user-attachments/assets/d616b5d0-4e94-406b-90fe-e6f8523937ae" />
 
 
+
+
 <img width="481" height="169" alt="Capture d&#39;écran 2026-05-21 173344" src="https://github.com/user-attachments/assets/26823356-2652-426b-b1e0-3eb2d978d3b9" />
+
+
 
 
 <img width="914" height="201" alt="Capture d&#39;écran 2026-05-21 173542" src="https://github.com/user-attachments/assets/801dc150-3704-4058-8b1e-aa3613398265" />
@@ -73,12 +79,20 @@ CREATE DATABASE school1;
 2.4 Définir les colonnes:
 
 
+
+
 <img width="515" height="134" alt="Capture d&#39;écran 2026-05-21 173948" src="https://github.com/user-attachments/assets/c987824a-26dc-490f-977e-1c2245201f2e" />
+
+
 
 
 2.5 Ajouter des données de test :
 
+
+
 <img width="601" height="112" alt="Capture d&#39;écran 2026-05-21 174225" src="https://github.com/user-attachments/assets/6268795a-3323-44b5-adb1-6b27d314baf2" />
+
+
 
 
 <img width="467" height="88" alt="Capture d&#39;écran 2026-05-21 174301" src="https://github.com/user-attachments/assets/e72282c0-4484-4758-94d5-f8c7363263c9" />
@@ -97,23 +111,41 @@ CREATE DATABASE school1;
    <img width="881" height="460" alt="Capture d&#39;écran 2026-05-21 180039" src="https://github.com/user-attachments/assets/0a1de66c-d1d5-4ea1-b11b-10acace1e2ce" />
 
 
+
+
 Fichier 1: connexion/Connexion.php :
+
+
+
 
 <img width="601" height="451" alt="image" src="https://github.com/user-attachments/assets/07d1e95a-8b06-4f3d-8439-fc3f6302784d" />
 
 
+
+
 Fichier 2 : classes/Etudiant.php
 
+
+
+
 <img width="617" height="443" alt="image" src="https://github.com/user-attachments/assets/ddb3ba0b-b1a1-427c-8d57-33d90d1b58c2" />
+
+
 
 
 Fichier : dao/IDao.php
 
 
+
+
 <img width="402" height="250" alt="image" src="https://github.com/user-attachments/assets/c989f895-072f-4167-b1c2-6b6784eb3f2a" />
 
 
+
+
 Fichier : service/EtudiantService.php
+
+
 
 
 <img width="601" height="442" alt="image" src="https://github.com/user-attachments/assets/0264df16-734e-42f1-baea-d5827d22b4ed" />
@@ -140,7 +172,13 @@ ws/loadEtudiant.php
 <img width="923" height="478" alt="image" src="https://github.com/user-attachments/assets/77594adf-1f1e-4ad5-9c7d-4cb4406e5eba" />
 
 
+
+
+
                 Rechercher Advanced REST Client
+
+
+                
                 
 
 <img width="779" height="384" alt="image" src="https://github.com/user-attachments/assets/8397ccdc-3b06-4834-ad9e-6f62f9c33ef0" />
@@ -149,7 +187,6 @@ ws/loadEtudiant.php
 <img width="389" height="194" alt="image" src="https://github.com/user-attachments/assets/223fe1b3-ed49-4c37-be46-e2965211dfdc" />
 
 
-<img width="911" height="425" alt="image" src="https://github.com/user-attachments/assets/15777ba3-1423-4845-a6ac-ee5d2c0c3d10" />
 
 
 <img width="374" height="243" alt="image" src="https://github.com/user-attachments/assets/0640a5f0-8484-4c0a-92a9-ac886dc28141" />
