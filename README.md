@@ -1,4 +1,4 @@
-<img width="389" height="194" alt="image" src="https://github.com/user-attachments/assets/830d063b-daa2-4920-ac4e-017783c97eb2" /><img width="881" height="460" alt="Capture d&#39;écran 2026-05-21 180039" src="https://github.com/user-attachments/assets/0c05e614-0494-4213-9887-d88b914d52ea" /># Projet Complet: Gestion des Étudiants - Guide Pas à Pas
+# Projet Complet: Gestion des Étudiants - Guide Pas à Pas
 
 
              Étape 1 : Installation et Configuration de XAMPP
